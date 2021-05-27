@@ -10,7 +10,7 @@ function deploy {
 if [ $1 = "serve" ]; then
 	serve
 elif [ $1 = "push" ]; then
-	git add . && git commit -m update && git push
+	git add . && git commit -m $2 && git push
 	deploy
 elif [ $1 = "deploy" ]; then
 	deploy
