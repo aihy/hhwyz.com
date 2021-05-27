@@ -11,6 +11,7 @@ if [ $1 = "serve" ]; then
 	serve
 elif [ $1 = "push" ]; then
 	git add . && git commit -m update && git push
+	deploy
 elif [ $1 = "deploy" ]; then
 	deploy
 fi

@@ -7,31 +7,20 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
+        {%- include social.html -%}
+        
+      </div>
+      <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-            {{ site.author | escape }}
-            {%- else -%}
-            {{ site.title | escape }}
-            {%- endif -%}
-          </li>
-          {%- if site.email -%}
-          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {%- endif -%}
-          <li><script
+          <li class="p-name"><script
             type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279958261'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279958261%26online%3D2' type='text/javascript'%3E%3C/script%3E"));</script>
         </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-        
-      </div>
+      
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
-      </div>
+      
     </div>
 
   </div>
