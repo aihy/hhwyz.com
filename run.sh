@@ -3,12 +3,14 @@
 function serve {
 	bundle exec jekyll serve -H 0.0.0.0
 }
-function push {
+function deploy {
 	bundle exec jekyll build && rsync -aPh --delete _site/* root@hhwyz.com:/root/html/
 }
 
 if [ $1 = "serve" ]; then
 	serve
 elif [ $1 = "push" ]; then
-	push
+	git add . && git commit -m update && git push
+elif [ $1 = "deploy" ]; then
+	deploy
 fi
