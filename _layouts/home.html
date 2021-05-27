@@ -19,7 +19,7 @@ layout: default
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.date | date: date_format }}&nbsp;&nbsp;
-            {{ post.title | capitalize }}
+            {{ post.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
