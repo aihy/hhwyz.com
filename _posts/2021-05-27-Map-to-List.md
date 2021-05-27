@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "java map to list"
+title:  "Map to List"
 date:   2021-05-27 16:00:00 +0800
-categories: jekyll update
 ---
 ```java
 import java.util.ArrayList;
