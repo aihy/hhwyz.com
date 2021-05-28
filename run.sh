@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 function serve {
 	bundle exec jekyll serve -H 0.0.0.0
