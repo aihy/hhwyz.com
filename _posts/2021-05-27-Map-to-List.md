@@ -2,6 +2,7 @@
 layout: post
 title:  "Map to List"
 date:   2021-05-27 16:00:00 +0800
+tags: javacode java
 ---
 ```java
 import java.util.ArrayList;
