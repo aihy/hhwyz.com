@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-欢迎访问 豪哥博客
+欢迎访问，豪哥博客！
