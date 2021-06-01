@@ -1,0 +1,48 @@
+---
+layout: default
+title: Tools
+permalink: /tools/
+---
+<h3>大卡计算器</h3>
+<p>请输入每份能量（KJ）</p>
+<p><input id="kj" type="number" autofocus onclick="oCopy(this)" onchange="qds_cal()"></p>
+<p>请输入净含量（g）</p>
+<p><input id="g" type="number" onclick="oCopy(this)" onchange="qds_cal()"></p>
+<p>请输入每份含量（g）</p>
+<p><input id="per_n_g" type="number" value="100" onclick="oCopy(this)" onchange="qds_cal()"></p>
+<div id="o1"></div>
+
+<br><hr><br>
+
+<h3>利率计算器</h3>
+<p>一共借多少钱？</p>
+<p><input id="all_money" type="number" onclick="oCopy(this)" onchange="money_cal()"></p>
+<p>一共还几个月？</p>
+<p><input id="num_of_month" type="number" autofocus onclick="oCopy(this)" onchange="money_cal()"></p>
+<p>每个月还多少钱？</p>
+<p><input id="money_per_month" type="number" onclick="oCopy(this)" onchange="money_cal()"></p>
+<div id="o2"></div>
+
+<script type="text/javascript">
+    function oCopy(obj) {
+        obj.select();    // 选中输入框中的内容
+    }
+    function getInt(id) {
+        return parseInt(document.getElementById(id).value);
+    }
+    function qds_cal() {
+        var dk = Math.round(1.0 / 4.184 / getInt("per_n_g") * getInt("g") * getInt("kj"));
+        document.getElementById("o1").innerHTML = "总热量：" + dk + "大卡";
+    }
+    function money_cal() {
+        var money=$.get('http://hhwyz.com:8023/money', {
+                        allMoney: getInt("all_money"),
+                        numOfMonth: getInt("num_of_month"),
+                        moneyPerMonth: getInt("money_per_month")
+                    }).done(function (data) {
+                        $('#o2').text(data);
+                    }).fail(function (xhr, status) {
+                        // alert('失败: ' + xhr.status + ', 原因: ' + status);
+                    });
+    }
+</script>
