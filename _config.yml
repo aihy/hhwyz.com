@@ -12,6 +12,7 @@ github_username: aihy
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-toc
 #  - jekyll-feed
 
 # Exclude from processing.
