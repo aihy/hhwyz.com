@@ -227,8 +227,15 @@
   }
 }
 
+.post-topic {
+  margin-left: 750px;
+  position:fixed;
+}
+
 .post-content {
   margin-bottom: $spacing-unit;
+  float: left;
+  width: 100%;
 
   h2 {
     @include relative-font-size(2);

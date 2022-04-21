@@ -16,7 +16,11 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {{ content | toc}}
+    {{ content }}
+  </div>
+
+  <div class="post-topic">
+    {% toc %}
   </div>
 
   {%- if site.disqus.shortname -%}
