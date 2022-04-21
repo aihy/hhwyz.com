@@ -36,3 +36,6 @@ locale: zh_CN
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+minima:
+  
