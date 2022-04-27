@@ -1,10 +1,10 @@
 #!/bin/bash -x
 
 function serve {
-	bundle exec jekyll serve -H 0.0.0.0
+	jekyll serve -H 0.0.0.0
 }
 function deploy {
-	bundle exec jekyll build && rsync -aPh --delete _site/* root@hhwyz.com:/root/html/
+	JEKYLL_ENV=production jekyll build && rsync --delete -aPh _site ubuntu@152.70.119.236:/home/ubuntu/hhwyz/
 }
 
 if [ $1 = "serve" ]; then
