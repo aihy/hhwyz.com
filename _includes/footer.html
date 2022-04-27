@@ -41,5 +41,7 @@
     </div>
 
   </div>
-
+  {%- if jekyll.environment == 'production' -%}
+  {%- include google-analytics.html -%}
+{%- endif -%}
 </footer>
